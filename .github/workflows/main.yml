@@ -1,0 +1,19 @@
+
+name: Build App
+on: [push, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Initializing
+        run: |
+          echo "Starting Build for android..."
+          echo "Preparing project environment..."
+      - name: Fake Build Step
+        run: echo "In a real scenario, this would run npm run build or gradlew assembleRelease"
+      
